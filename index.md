@@ -26,51 +26,6 @@ Syntax highlighted code block
 [Link](url) and ![Image](src)
 ```
 
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Organization Chart Plugin</title>
-  <link rel="icon" href="https://dabeng.github.io/OrgChart/img/logo.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/orgchart/2.1.9/css/jquery.orgchart.min.css">
-  <link rel="stylesheet" href="https://dabeng.github.io/OrgChart/css/style.css">
-</head>
-<body>
-  <div id="chart-container"></div>
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/orgchart/2.1.9/js/jquery.orgchart.min.js"></script>
-  <script type="text/javascript">
-    $(function() {
-
-    var datasource = {
-      'name': 'Kalidas',
-      'children': [
-        { 'name': 'Odhvaji' },
-        { 'name': 'Hemraj', 'title': 'department manager',
-          'children': [
-            { 'name': 'Tie Hua', 'title': 'senior engineer' },
-            { 'name': 'Hei Hei', 'title': 'senior engineer',
-              'children': [
-                { 'name': 'Dan Dan', 'title': 'engineer' }
-              ]
-            },
-            { 'name': 'Pang Pang', 'title': 'senior engineer' }
-          ]
-        },
-        { 'name': 'Hong Miao', 'title': 'department manager' }
-      ]
-    };
-
-    $('#chart-container').orgchart({
-      'data' : datasource,
-      'nodeContent': 'title'
-    });
-
-  });
-  </script>
-  </body>
-</html>
-
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
