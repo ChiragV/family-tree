@@ -25,7 +25,12 @@ Syntax highlighted code block
 
 [Link](url) and ![Image](src)
 ```
-
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<p>hi how are you </p>
+</body>
+</html>
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
