@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Organization Chart Plugin</title>
+  <link rel="icon" href="https://dabeng.github.io/OrgChart/img/logo.png">
+  <link rel="stylesheet" href="https://dabeng.github.io/OrgChart/css/jquery.orgchart.css">
+
+
+  
+  
+</head>
+<body>
+  <div id="chart-container"></div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="https://dabeng.github.io/OrgChart/js/jquery.orgchart.js"></script>
+  <script type="text/javascript">
+       $(function() {
+
+    var datasource = {
+      'name': 'Kalidas',
+      'children': [
+        
+        { 'name': 'Odhvaji',
+          'children': [
+            { 'name': 'Dakshaben' },
+			{ 'name': 'Dhiru','title':'Pravinaben' ,'children': [
+                { 'name': 'Jasmin','title':'Devanshi'},
+				{ 'name': 'Ankur','title':'Khyati'}
+              ]},
+			{ 'name': 'Jaman','title':'Anilaben'  ,'children': [
+                { 'name': 'Parag'}
+              ]},
+            { 'name': 'Kunju','title':'Leelavanti','children': [
+                { 'name': 'Bhavesh','title':'Trupti','children':[{'name':'Nandini'},{'name':'Shyam'}]},
+				{ 'name': 'Sudhir','title':'Reena','children':[{'name':'Shreyas'}]},
+				{ 'name': 'Suresh','title':'Sonal','children':[{'name':'Ayush'},{'name':'Dhruvi'}]},
+				{ 'name': 'Maya'},
+				{ 'name': 'Neepa'}
+              ]
+            },
+            { 'name': 'Joshnaben' },
+			{ 'name': 'Menaben' }
+          ]
+        },
+		{ 'name': 'Hemraj' ,'children':[{'name':'Devchand'},{'name':'Haridas','title':'Hiraben','children':[{'name':'Rashmi'},{'name':'Varsha'}]},{'name':'Jayaben'},{'name':'Parvatiben'},{'name':'Prabhudas'},{'name':'Nandandas','title':'Savitaben' ,'children':[{'name':'Nitin','children':[{'name':'Vishakha'}]},{'name':'Chatrabhuj','children':[{'name':'Hardik','title':'Khushi','children':[{'name':'Kali'},{'name':'Soham'}]},{'name':'Sharad','title':'Kirti'},{'name':'Darshna'},{'name':'Mala'}]}]}]},
+        { 'name': 'Gokaldas' ,'children':[{'name':'Magan','children':
+		[
+		{'name':'Amu','children':[{'name':'Chirag','children':[{'name':'Zoe'},{'name':'Arya'}]},{'name':'Binita'},{'name':'Disha'}]},
+		{'name':'Chetan','children':[{'name':'Hinal'},{'name':'Diya'}]},
+		{'name':'Jayesh','children':[{'name':'Prem'}]},
+		{'name':'Ranjan'},
+		{'name':'Nila'}
+		]
+		
+		}]}
+      ]
+    };
+
+    $('#chart-container').orgchart({
+      'data' : datasource,
+      'nodeContent': 'title'
+    });
+
+  });
+  </script>
+  </body>
+</html>
+
+
+
+
