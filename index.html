@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Vithlani family tree </title>
+  <title>Vithlani Family Tree </title>
   <link rel="icon" href="https://dabeng.github.io/OrgChart/img/logo.png">
   <link rel="stylesheet" href="https://dabeng.github.io/OrgChart/css/jquery.orgchart.css">
 <style>
@@ -15,12 +15,20 @@ font-family: Arial, Helvetica, sans-serif;
 {
 font-family: Arial, Helvetica, sans-serif;
 }
+#rcorners2 {
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px;  
+}
 </style>
 
   
   
 </head>
 <body>
+<p style='border-radius: 25px;width: 200px;height: 25px; border: 2px solid rgba(217, 83, 79, 0.8);text-align:center;vertical-align:baseline;'> Vithlani Family Tree </p>
 
   <div id="chart-container"></div>
 
@@ -30,42 +38,42 @@ font-family: Arial, Helvetica, sans-serif;
        $(function() {
 
     var datasource = {
-      'name': 'Kalidas',
+      'name': 'Kalidas Bhai',
       'children': [
         
-        { 'name': 'Odhvaji',
+        { 'name': 'Odhvaji Bhai',
           'children': [
-            { 'name': 'Dakshaben' },
-			{ 'name': 'Dhiru','title':'Pravinaben' ,'children': [
-                { 'name': 'Jasmin','title':'Devanshi'},
-				{ 'name': 'Ankur','title':'Khyati'}
+            { 'name': 'Daksha Ben' },
+			{ 'name': 'Dhiru Bhai','title':'Pravina Ben' ,'children': [
+                { 'name': 'Jasmin Bhai','title':'Devanshi Ben'},
+				{ 'name': 'Ankur Bhai','title':'Khyati Ben'}
               ]},
-			{ 'name': 'Jaman','title':'Anilaben'  ,'children': [
-                { 'name': 'Parag'}
+			{ 'name': 'Jaman Bhai','title':'Anila Ben'  ,'children': [
+                { 'name': 'Parag Bhai'}
               ]},
-            { 'name': 'Kunju','title':'Leelavanti','children': [
-                { 'name': 'Bhavesh','title':'Trupti','children':[{'name':'Nandini'},{'name':'Shyam'}]},
-				{ 'name': 'Sudhir','title':'Reena','children':[{'name':'Shreyas'}]},
-				{ 'name': 'Suresh','title':'Sonal','children':[{'name':'Ayush'},{'name':'Dhruvi'}]},
-				{ 'name': 'Maya'},
-				{ 'name': 'Neepa'}
+            { 'name': 'Kunju Bhai','title':'Leelavanti Ben','children': [
+                { 'name': 'Bhavesh Bhai','title':'Trupti Ben','children':[{'name':'Nandini'},{'name':'Shyam'}]},
+				{ 'name': 'Sudhir Bhai','title':'Reena Ben','children':[{'name':'Shreyas'}]},
+				{ 'name': 'Suresh Bhai','title':'Sonal Ben','children':[{'name':'Ayush'},{'name':'Dhruvi'}]},
+				{ 'name': 'Maya Ben'},
+				{ 'name': 'Neepa Ben'}
               ]
             },
-            { 'name': 'Joshnaben' },
-			{ 'name': 'Menaben' }
+            { 'name': 'Joshna Ben' },
+			{ 'name': 'Mena Ben' }
           ]
         },
-		{ 'name': 'Hemraj' ,'children':[{'name':'Devchand'},{'name':'Haridas','title':'Hiraben','children':[{'name':'Rashmi'},{'name':'Varsha'}]},{'name':'Jayaben'},{'name':'Parvatiben'},{'name':'Prabhudas'},{'name':'Nandandas','title':'Savitaben' ,'children':[{'name':'Nitin','children':[{'name':'Vishakha'}]},{'name':'Chatrabhuj','children':[{'name':'Hardik','title':'Khushi','children':[{'name':'Kali'},{'name':'Soham'}]},{'name':'Sharad','title':'Kirti'},{'name':'Darshna'},{'name':'Mala'}]}]}]},
-        { 'name': 'Gokaldas' ,'children':[{'name':'Magan','title':'Diwaliben','children':
+		{ 'name': 'Hemraj Bhai' ,'children':[{'name':'Devchand Bhai'},{'name':'Haridas Bhai','title':'Hira Ben','children':[{'name':'Rashmi Ben'},{'name':'Varsha Ben'}]},{'name':'Jaya Ben'},{'name':'Parvati Ben'},{'name':'Prabhudas  Bhai'},{'name':'Nandandas Bhai','title':'Savita Ben' ,'children':[{'name':'Nitin Bhai','children':[{'name':'Vishakha'}]},{'name':'Chatrabhuj Bhai','children':[{'name':'Hardik','title':'Khushi Ben','children':[{'name':'Kali'},{'name':'Soham'}]},{'name':'Sharad','title':'Kirti Ben' ,'children':[{'name':'Jiya'}]},{'name':'Darshna'},{'name':'Mala'}]}]}]},
+        { 'name': 'Gokaldas Bhai' ,'children':[{'name':'Magan Bhai','title':'Diwali Ben','children':
 		[
-		{'name':'Amu','children':[{'name':'Chirag','title':'Megha','children':[{'name':'Zoe'},{'name':'Arya'}]},{'name':'Binita'},{'name':'Disha'}]},
-		{'name':'Chetan','title':'Manisha','children':[{'name':'Hinal'},{'name':'Diya'}]},
-		{'name':'Jayesh','title':'Rajshri','children':[{'name':'Prem'}]},
-		{'name':'Ranjan'},
-		{'name':'Nila'}
+		{'name':'Amu Bhai','children':[{'name':'Chirag','title':'Megha','children':[{'name':'Zoe'},{'name':'Arya'}]},{'name':'Binita'},{'name':'Disha'}]},
+		{'name':'Chetan Bhai','title':'Manisha Ben','children':[{'name':'Hinal'},{'name':'Diya'}]},
+		{'name':'Jayesh Bhai','title':'Rajshri Ben','children':[{'name':'Prem'}]},
+		{'name':'Ranjan Ben'},
+		{'name':'Nila Ben'}
 		]
 		
-		},{'name':'Keshavjibhai','title':'Maniben','children':[{'name':'Hitesh','title':'Rakhi','children':[{'name':'Palak'},{'name':'Dhruvi'}]},{'name':'Hemlata'},{'name':'Joshna'},{'name':'Kundan'},{'name':'Rekha'},{'name':'Bhavana'}]},{'name':'Harjivanbhai','title':'Hansaben','children':[{'name':'Mahendra','title':'Jyoti','children':[{'name':'Bhavik'},{'name':'Tejas'}]},{'name':'Jayshree'}]}]}
+		},{'name':'Keshavji Bhai','title':'Mani Ben','children':[{'name':'Hitesh Bhai','title':'Rakhi Ben','children':[{'name':'Palak'},{'name':'Dhruvi'}]},{'name':'Hemlata Ben'},{'name':'Joshna Ben'},{'name':'Kundan Ben'},{'name':'Rekha Ben'},{'name':'Bhavana Ben'}]},{'name':'Harjivan Bhai','title':'Hansa Ben','children':[{'name':'Mahendra Bhai','title':'Jyoti Ben','children':[{'name':'Bhavik'},{'name':'Tejas'}]},{'name':'Jayshree Ben'}]}]}
       ]
     };
 
