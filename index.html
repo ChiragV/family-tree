@@ -98,12 +98,42 @@ zoom(1.9);
     });
  
  }
-  function zoom(scale){
-  document.body.style.transform = "scale(" + scale + ")";
-    document.body.style.transformOrigin = "top left";
-    document.body.style.width = (100 / scale) + "%";
-    document.body.style.height = (100 / scale) + "%";
- }
+ var zoom = (function () {
+    var scale = 1, recurLev = 0;
+    function alter(fn, adj) {
+        var original = $.fn[fn];
+        $.fn[fn] = function () {
+            var result;
+            recurLev += 1;
+            try {
+                result = original.apply(this, arguments);
+            } finally {
+                recurLev -= 1;
+            }
+            if (arguments.length === 0 && recurLev === 0) {
+                result = adj(result);
+            }
+            return result;
+        };
+    }
+    function scalePos(n) { return n / scale; }
+    /* Not needed since jQuery 3.2.0
+    alter("width", scalePos);
+    alter("height", scalePos);
+    alter("outerWidth", scalePos);
+    alter("outerHeight", scalePos);
+    alter("innerWidth", scalePos);
+    alter("innerHeight", scalePos);
+    */
+    alter("offset", function (o) { o.top /= scale; o.left /= scale; return o; });
+    return function (s) {
+        scale = s;
+        document.body.style.transform = "scale(" + scale + ")";
+        document.body.style.transformOrigin = "top left";
+        document.body.style.width = (100 / scale) + "%";
+        document.body.style.height = (100 / scale) + "%";
+    };
+}());
   </script>
   </body>
 </html>
