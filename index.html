@@ -3,8 +3,13 @@
 <head>
   <meta charset="utf-8">
   <title>Vithlani Family Tree </title>
-  <link rel="icon" href="https://dabeng.github.io/OrgChart/img/logo.png">
+  
   <link rel="stylesheet" href="https://dabeng.github.io/OrgChart/css/jquery.orgchart.css">
+  <!--
+  <link rel="icon" href="https://dabeng.github.io/OrgChart/img/logo.png">
+  <link rel="icon" type="image/png" href="./tree.png"/> 
+  -->
+  <link rel="icon" href="./images/tree.png" type="image/png" sizes="16x16">
 <style>
 .orgchart .node .title 
 {
@@ -45,7 +50,7 @@ window.mobileCheck = function() {
 callme1();
 if(window.mobileCheck()==true)
 {
-screen.orientation.lock('landscape');
+
 zoom(1.9);
 }
   });
@@ -78,7 +83,7 @@ zoom(1.9);
 			{ 'name': 'Mena Ben' }
           ]
         },
-		{ 'name': 'Hemraj Bhai' ,'children':[{'name':'Devchand Bhai'},{'name':'Haridas Bhai','title':'Hira Ben','children':[{'name':'Rashmi Ben'},{'name':'Varsha Ben'}]},{'name':'Jaya Ben'},{'name':'Parvati Ben'},{'name':'Prabhudas  Bhai'},{'name':'Narandas Bhai','title':'Savita Ben' ,'children':[{'name':'Nitin Bhai','title':'Premlata Ben','children':[{'name':'Vishakha'}]},{'name':'Chatrabhuj Bhai','title':'Ranjan Ben','children':[{'name':'Hardik','title':'Khushi Ben','children':[{'name':'Kali'},{'name':'Soham'}]},{'name':'Sharad','title':'Kirti Ben' ,'children':[{'name':'Jiya'}]},{'name':'Darshna'},{'name':'Mala'}]}]}]},
+		{ 'name': 'Hemraj Bhai' ,'children':[{'name':'Devchand Bhai'},{'name':'Haridas Bhai','title':'Hira Ben','children':[{'name':'Rashmi Ben'},{'name':'Varsha Ben'}]},{'name':'Jaya Ben'},{'name':'Parvati Ben'},{'name':'Prabhudas  Bhai'},{'name':'Narandas Bhai','title':'Savita Ben' ,'children':[{'name':'Nitin Bhai','title':'Premlata Ben','children':[{'name':'Vishakha'},{'name':'Ashish'}]},{'name':'Chatrabhuj Bhai','title':'Ranjan Ben','children':[{'name':'Hardik','title':'Khushi Ben','children':[{'name':'Kali'},{'name':'Soham'}]},{'name':'Sharad','title':'Kirti Ben' ,'children':[{'name':'Jiya'}]},{'name':'Darshna'},{'name':'Mala'}]}]}]},
         { 'name': 'Gokaldas Bhai' ,'children':[{'name':'Magan Bhai','title':'Diwali Ben','children':
 		[
 		{'name':'Amu Bhai','children':[{'name':'Chirag','title':'Megha','children':[{'name':'Zoe'},{'name':'Arya'}]},{'name':'Binita','title':'Sripal Bhai'},{'name':'Disha','title':'Rajesh Bhai'}]},
@@ -88,7 +93,7 @@ zoom(1.9);
 		{'name':'Nila Ben','title':'Rajesh Bhai'}
 		]
 		
-		},{'name':'Keshavji Bhai','title':'Mani Ben','children':[{'name':'Hitesh Bhai','title':'Rakhi Ben','children':[{'name':'Palak'},{'name':'Dhruvi'}]},{'name':'Hemlata Ben'},{'name':'Joshna Ben'},{'name':'Kundan Ben'},{'name':'Rekha Ben'},{'name':'Bhavana Ben'}]},{'name':'Harjivan Bhai','title':'Hansa Ben','children':[{'name':'Mahendra Bhai','title':'Jyoti Ben','children':[{'name':'Bhavik'},{'name':'Tejas'}]},{'name':'Jayshree Ben'}]}]}
+		},{'name':'Keshavji Bhai','title':'Mani Ben','children':[{'name':'Hemlata Ben'},{'name':'Joshna Ben'},{'name':'Rekha Ben'},{'name':'Kundan Ben'},{'name':'Hitesh Bhai','title':'Rakhi Ben','children':[{'name':'Palak'},{'name':'Dhruvi'}]},{'name':'Bhavana Ben'}]},{'name':'Harjivan Bhai','title':'Hansa Ben','children':[{'name':'Mahendra Bhai','title':'Jyoti Ben','children':[{'name':'Bhavik'},{'name':'Tejas'}]},{'name':'Jayshree Ben'}]}]}
       ]
     };
 
@@ -98,42 +103,12 @@ zoom(1.9);
     });
  
  }
- var zoom = (function () {
-    var scale = 1, recurLev = 0;
-    function alter(fn, adj) {
-        var original = $.fn[fn];
-        $.fn[fn] = function () {
-            var result;
-            recurLev += 1;
-            try {
-                result = original.apply(this, arguments);
-            } finally {
-                recurLev -= 1;
-            }
-            if (arguments.length === 0 && recurLev === 0) {
-                result = adj(result);
-            }
-            return result;
-        };
-    }
-    function scalePos(n) { return n / scale; }
-    /* Not needed since jQuery 3.2.0
-    alter("width", scalePos);
-    alter("height", scalePos);
-    alter("outerWidth", scalePos);
-    alter("outerHeight", scalePos);
-    alter("innerWidth", scalePos);
-    alter("innerHeight", scalePos);
-    */
-    alter("offset", function (o) { o.top /= scale; o.left /= scale; return o; });
-    return function (s) {
-        scale = s;
-        document.body.style.transform = "scale(" + scale + ")";
-        document.body.style.transformOrigin = "top left";
-        document.body.style.width = (100 / scale) + "%";
-        document.body.style.height = (100 / scale) + "%";
-    };
-}());
+  function zoom(scale){
+  document.body.style.transform = "scale(" + scale + ")";
+    document.body.style.transformOrigin = "top left";
+    document.body.style.width = (100 / scale) + "%";
+    document.body.style.height = (100 / scale) + "%";
+ }
   </script>
   </body>
 </html>
